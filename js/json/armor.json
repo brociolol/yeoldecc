@@ -1,0 +1,84 @@
+var armorData = [
+{
+  "name": "Leather Armor",
+  "description": "A set of light armor made from tanned animal hides.",
+  "category" : "Light",
+  "acmodifier": 11,
+  "weight": "10 lb",
+  "stealth": ""	,
+  "cost": "10gp",
+  "class": ["Barbarian", "Bard", "Cleric", "Druid", "Ranger", "Rogue", "Warlock"]
+},
+{
+  "name": "Padded Armor",
+  "description": "A set of light armor made from quilted layers of cloth and batting.",
+  "category" : "Light",
+  "acmodifier": 11,
+  "weight": "8 lb",
+  "stealth": "Disadvantage",
+  "cost": "5gp",
+  "class": ["Barbarian", "Bard", "Cleric", "Druid", "Ranger", "Rogue", "Warlock"]
+},
+{
+  "name": "Studded Leather Armor",
+  "description": "A set of light armor made from tough but flexible leather, reinforced with close-set rivets or spikes.",
+  "category" : "Light",
+  "acmodifier": 12,
+  "weight": "8 lb",
+  "stealth": "",
+  "cost": "45gp",
+  "class": ["Barbarian", "Bard", "Cleric", "Druid", "Ranger", "Rogue", "Warlock"]
+},
+{
+  "name": "Silk, Scale, and Chitlin Armor",
+  "description": "A set of light armor that woven from spider silk, fish scales, and giant ant Chitlin.",
+  "category" : "Medium",
+  "acmodifier": 13,
+  "weight": "30 lb",
+  "stealth": "",
+  "cost": "75gp",
+  "class": ["Barbarian", "Cleric", "Druid", "Ranger"]
+},
+{
+  "name": "Scale Mail",
+  "description": "A set of light armor that woven from spider silk, fish scales, and giant ant Chitlin.",
+  "category" : "Medium",
+  "acmodifier": 14,
+  "weight": "45 lb",
+  "stealth": "",
+  "cost": "50gp",
+  "class": ["Barbarian", "Cleric", "Ranger"]
+},
+{
+  "name": "Unarmored",
+  "description": "No fancy armor, just some clothes or maybe a wizard's robe.",
+  "category" : "None",
+  "acmodifier": 0,
+  "weight": "3 lb",
+  "stealth": "",
+  "cost": "0gp",
+  "class": []
+}
+]
+
+
+
+
+
+//{
+//  "Light Armor": {
+//    "class": ["Barbarian", "Bard", "Cleric", "Druid", "Ranger", "Rogue", "Warlock"]
+//  },
+//  "Medium Armor": {
+ //   "class": ["Barbarian", "Cleric", "Druid", "Ranger"]
+ // },
+//  "Heavy Armor": {
+//    "class": ["Fighter", "Paladin"]
+//  },
+//  "Shields": {
+//    "class": ["Barbarian", "Cleric", "Fighter", "Paladin", "Ranger"]
+//  },
+//  "No Armor Proficiency": {
+ //   "class": ["Monk", "Sorcerer", "Wizard"]
+ // }
+//}

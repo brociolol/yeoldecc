@@ -1,0 +1,146 @@
+var classesData =  [
+    {
+      "classname": "Barbarian",
+      "subclasses": [
+        { "name": "Path of the Berserker" },
+        { "name": "Path of the Totem Warrior" },
+        { "name": "Path of the Ancestral Guardian" },
+        { "name": "Path of the Storm Herald" },
+        { "name": "Path of the Zealot" }
+      ],
+      "abilitypreference" : ["Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma"],
+      "hitdie" : "1d12"
+    },
+    {
+      "classname": "Bard",
+      "subclasses": [
+        { "name": "College of Lore" },
+        { "name": "College of Valor" },
+        { "name": "College of Glamour" },
+        { "name": "College of Swords" },
+        { "name": "College of Whispers" }
+      ],
+      "abilitypreference" : ["Charisma", "Dexterity", "Constitution", "Wisdom", "Intelligence", "Strength"],
+      "hitdie" : "1d8"
+    },
+    {
+      "classname": "Cleric",
+      "subclasses": [
+        { "name": "Life Domain" },
+        { "name": "Light Domain" },
+        { "name": "Nature Domain" },
+        { "name": "Tempest Domain" },
+        { "name": "Trickery Domain" }
+      ],
+      "abilitypreference" : ["Wisdom", "Constitution", "Dexterity", "Stength", "Intelligence", "Charisma"],
+      "hitdie" : "1d8"
+    },
+    {
+      "classname": "Druid",
+      "subclasses": [
+        { "name": "Circle of the Land" },
+        { "name": "Circle of the Moon" },
+        { "name": "Circle of Dreams" },
+        { "name": "Circle of the Shepherd" },
+        { "name": "Circle of Spores" }
+      ],
+      "abilitypreference" : ["Wisdom", "Dexterity", "Constitution", "Intelligence", "Charisma", "Strength"],
+      "hitdie" : "1d8"
+    },
+    {
+      "classname": "Fighter",
+      "subclasses": [
+        { "name": "Champion" },
+        { "name": "Battle Master" },
+        { "name": "Eldritch Knight" },
+        { "name": "Arcane Archer" },
+        { "name": "Cavalier" }
+      ],
+      "abilitypreference" : ["Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma"],
+      "hitdie" : "1d10"
+    },
+    {
+      "classname": "Monk",
+      "subclasses": [
+        { "name": "Way of the Open Hand" },
+        { "name": "Way of Shadow" },
+        { "name": "Way of the Four Elements" },
+        { "name": "Way of the Kensei" },
+        { "name": "Way of the Sun Soul" }
+      ],
+      "abilitypreference" : ["Dexterity", "Wisdom", "Constitution", "Strength", "Intelligence", "Charisma"],
+      "hitdie" : "1d8"
+    },
+    {
+      "classname": "Paladin",
+      "subclasses": [
+        { "name": "Oath of Devotion" },
+        { "name": "Oath of the Ancients" },
+        { "name": "Oath of Vengeance" },
+        { "name": "Oath of the Crown" },
+        { "name": "Oath of Conquest" }
+      ],
+      "abilitypreference" : ["Strength", "Charisma", "Constitution", "Dexterity", "Wisdom", "Intelligence"],
+      "hitdie" : "1d10"
+    },
+    {
+      "classname": "Ranger",
+      "subclasses": [
+        { "name": "Hunter" },
+        { "name": "Beast Master" },
+        { "name": "Gloom Stalker" },
+        { "name": "Horizon Walker" },
+        { "name": "Monster Slayer" }
+      ],
+      "abilitypreference" : ["Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma"],
+      "hitdie" : "1d10"
+    },
+    {
+      "classname": "Rogue",
+      "subclasses": [
+        { "name": "Thief" },
+        { "name": "Assassin" },
+        { "name": "Arcane Trickster" },
+        { "name": "Inquisitive" },
+        { "name": "Mastermind" }
+      ],
+      "abilitypreference" : ["Dexterity", "Charisma", "Intelligence", "Constitution", "Wisdom", "Strength"],
+      "hitdie" : "1d8"
+    },
+    {
+      "classname": "Sorcerer",
+      "subclasses": [
+        { "name": "Draconic Bloodline" },
+        { "name": "Wild Magic" },
+        { "name": "Storm Sorcery" },
+        { "name": "Divine Soul" },
+        { "name": "Shadow Magic" }
+      ],
+      "abilitypreference" : ["Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma"],
+      "hitdie" : "1d6"
+    },
+    {
+      "classname": "Warlock",
+      "subclasses": [
+        { "name": "The Archfey" },
+        { "name": "The Fiend" },
+        { "name": "The Great Old One" },
+        { "name": "The Celestial" },
+        { "name": "The Hexblade" }
+      ],
+      "abilitypreference" : ["Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma"],
+      "hitdie" : "1d8"
+    },
+    {
+      "classname": "Wizard",
+      "subclasses": [
+        { "name": "School of Abjuration" },
+        { "name": "School of Conjuration" },
+        { "name": "School of Divination" },
+        { "name": "School of Enchantment" },
+        { "name": "School of Evocation" }
+      ],
+      "abilitypreference" : ["Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma"],
+      "hitdie" : "1d6"
+    }
+  ]

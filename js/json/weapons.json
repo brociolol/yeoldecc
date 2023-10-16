@@ -1,0 +1,175 @@
+var weaponData = [
+    {
+        "name": "Club",
+        "description": "A simple yet reliable wooden club, favored by those who appreciate straightforward, no-nonsense bashing power.",
+        "cost": "1 sp",
+        "damage": "1d4",
+        "damagetype": "Bludgeoning",
+        "weight": "2 lb",
+        "homebrew" : "False",
+        "properties": [ 
+            "Light"
+        ]
+    },
+    {
+        "name": "Dagger",
+        "description": "A sleek and versatile dagger, the perfect choice for concealed strikes and agile combat maneuvers.",
+        "cost": "2 gp",
+        "damage": "1d4",
+        "damagetype": "Piercing",
+        "weight": "1 lb",
+        "homebrew" : "False",
+        "properties": [ 
+            "Light", 
+            "Finesse",
+            "Thrown (20/60)"
+        ]
+    },
+    {
+        "name": "Light Hammer",
+        "description": "A compact and sturdy light hammer, designed for both throwing and delivering crushing blows.",
+        "cost": "2 gp",
+        "damage": "1d4",
+        "damagetype": "Bludgeoning",
+        "homebrew" : "False",
+        "weight": "2 lb",
+        "properties": [ 
+            "Light",
+            "Thrown (20/60)"
+        ]
+    },
+    {
+        "name": "Mace",
+        "description": "A solid and unadorned mace, the epitome of simplicity and effectiveness in bludgeoning foes into submission.",
+        "cost": "5 gp",
+        "damage": "1d6",
+        "damagetype": "Bludgeoning",
+        "homebrew" : "False",
+        "weight": "2 lb",
+        "properties": []
+    },
+    {
+        "name": "Sickle",
+        "description": "A curving, single-edged sickle, expertly crafted for swift and precise slashes in close combat.",
+        "cost": "1 gp",
+        "damage": "1d4",
+        "damagetype": "Slashing",
+        "homebrew" : "False",
+        "weight": "2 lb",
+        "properties": [ 
+            "Light"
+        ]
+    },
+    {
+        "name": "Quarterstaff",
+        "description": "A versatile and time-honored quarterstaff, favored by monks and martial artists for its balance and reach.",
+        "cost": "2 sp",
+        "damage": "1d6",
+        "damagetype": "Bludgeoning",
+        "homebrew" : "False",
+        "weight": "4 lb",
+        "properties": [ 
+            "Versatile (1d8)"
+        ]
+    },
+    {
+        "name": "Zerka",
+        "description": "An exotic and finely crafted Zerka blade, combining speed, precision, and a touch of finesse in every strike.",
+        "cost": "10 sp",
+        "damage": "1d8",
+        "damagetype": "Piercing",
+        "homebrew" : "False",
+        "weight": "3 lb",
+        "properties": [ 
+            "Special", 
+            "Finesse",
+            "Thrown (40/160)"
+        ]
+    },
+    {
+        "name": "Farmer's Scythe",
+        "description": "This moonlit scythe, etched with eldritch runes, hungers for souls, turning a farmer's tool into a deadly symbol of vengeance.",
+        "cost": "10 sp",
+        "damage": "1d8",
+        "damagetype": "Slashing",
+        "homebrew" : "False",
+        "weight": "8 lb",
+        "properties": [ 
+            "Heavy", 
+            "Two-handed",
+            "Martial melee weapon"
+        ]
+    },
+    {
+        "name": "Light Crossbow",
+        "description": "A silent harbinger of doom, delivering death from a distance with deadly precision.",
+        "cost": "25 gp",
+        "damage": "1d8",
+        "damagetype": "Piercing",
+        "weight": "5 lb",
+        "properties": [
+            "Ammunition (80/320)",
+            "Loading",
+            "Two-Handed"
+        ]
+    },
+    {
+        "name": "Dart",
+        "description": "Strikes swiftly and unexpectedly, finding its mark with grace and finesse.",
+        "cost": "5 cp",
+        "damage": "1d4",
+        "damagetype": "Piercing",
+        "weight": "0.25 lb",
+        "properties": [
+            "Finesse",
+            "Thrown (20/60)"
+        ]
+    },
+    {
+        "name": "Shortbow",
+        "description": "A symbol of swift and elegant warfare, sending arrows flying like poetry in motion, striking with deadly precision.",
+        "cost": "25 gp",
+        "damage": "1d6",
+        "damagetype": "Piercing",
+        "weight": "2 lb",
+        "properties": [
+            "Ammunition (80/320)",
+            "Two-Handed"
+        ]
+    },
+    {
+        "name": "Sling",
+        "description": "A humble tool that transforms into a harbinger of pain in skilled hands, delivering blunt force with precision.",
+        "cost": "1 sp",
+        "damage": "1d4",
+        "damagetype": "Bludgeoning",
+        "weight": "",
+        "properties": [
+            "Ammunition (30/120)"
+        ]
+    },
+    {
+        "name": "Slingstaff",
+        "description": "A versatile and powerful weapon that combines the reach of a staff with the deadly accuracy of a sling, striking fear into the hearts of its foes.",
+        "cost": "2 sp",
+        "damage": "1d6",
+        "damagetype": "Bludgeoning",
+        "weight": "2 lb",
+        "properties": [
+            "Ammunition (30/120)",
+            "Two-Handed"
+        ]
+    },
+    {
+    "name": "Bag of 3 Electric Eels",
+    "description": "A peculiar weapon consisting of three live electric eels that can be thrown at enemies, delivering a shocking jolt of lightning damage upon impact.",
+    "cost": "5 gp",
+    "damage": "1d8",
+    "damagetype": "Lightning",
+    "weight": "2 lbs",
+    "homebrew": "True",
+    "properties": [
+        "Thrown (20/60)"
+    ]
+}
+];
