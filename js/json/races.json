@@ -232,66 +232,66 @@ var racesData = [
       "subraces": [
       	{
       		"name": "Black",
-      		"traits": [],
+      		"traits": ["Draconic Resistance (Black)", "Draconic Ancestry (Black)"],
       		"abilitymodifiers": [
       		]
       	},
       	{
       		"name": "Blue",
-      		"traits": [],
+      		"traits": ["Draconic Resistance (Blue)", "Draconic Ancestry (Blue)"],
       		"abilitymodifiers": [
       		]
       	},
       	{
       		"name": "Brass",
-      		"traits": [],
+      		"traits": ["Draconic Resistance (Brass)", "Draconic Ancestry (Brass)"],
       		"abilitymodifiers": [
       		]
       	},
       	{
       		"name": "Bronze",
-      		"traits": [],
+      		"traits": ["Draconic Resistance (Bronze)", "Draconic Ancestry (Bronze)"],
       		"abilitymodifiers": [
       		]
       	},
       	{
       		"name": "Copper",
-      		"traits": [],
+      		"traits": ["Draconic Resistance (Copper)", "Draconic Ancestry (Copper)"],
       		"abilitymodifiers": [
       		]
       	},
       	{
       		"name": "Gold",
-      		"traits": [],
+      		"traits": ["Draconic Resistance (Gold)", "Draconic Ancestry (Gold)"],
       		"abilitymodifiers": [
       		]
       	},
       	{
       		"name": "Green",
-      		"traits": [],
+      		"traits": ["Draconic Resistance (Green)", "Draconic Ancestry (Green)"],
       		"abilitymodifiers": [
       		]
       	},
       	{
       		"name": "Red",
-      		"traits": [],
+      		"traits": ["Draconic Resistance (Red)", "Draconic Ancestry (Red)"],
       		"abilitymodifiers": [
       		]
       	},
       	{
       		"name": "Silver",
-      		"traits": [],
+      		"traits": ["Draconic Resistance (Silver)", "Draconic Ancestry (Silver)"],
       		"abilitymodifiers": [
       		]
       	},
       	{
       		"name": "White",
-      		"traits": [],
+      		"traits": ["Draconic Resistance (White)", "Draconic Ancestry (White)"],
       		"abilitymodifiers": [
       		]
       	}
       ],
-      "traits": ["Breath Weapon", "Damage Resistance", "Draconic Ancestry"],
+      "traits": ["Breath Weapon"],
        "abilitymodifiers" : [
       	{
       		"name": "Strength",
