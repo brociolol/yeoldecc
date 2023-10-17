@@ -1,5 +1,5 @@
 
-     var races = racesData;
+      var races = racesData;
       var classes = classesData;
       var armor = armorData;
       var weapons = weaponData;
@@ -133,13 +133,17 @@
 
         console.log(characterObject);
         var mainContain = document.getElementById('maincontain');
-        let subRaceName = (characterObject.charactersubrace ? characterObject.charactersubrace.name : "");
+        let subRaceName = (characterObject.charactersubrace ? characterObject.charactersubrace.name : null);
+          let raceToDisplay = (subRaceName ? subRaceName : characterObject.characterrace.name)
         var characterSheetHTML = '';
-            characterSheetHTML += '<div class="pt-3" id="character"><h2>CHARACTER</h2><div class="pt-3 pb-3"><h4>' + characterObject.charactername + '</h4><span>' + subRaceName + ' ' + characterObject.characterrace.name +  '<br>Level ' + characterObject.characterlevel + ' ' + characterObject.charactersubclass + ' ' + characterObject.characterclass.classname + '</span><br>';
-            if (characterObject.characterrace.traits.length > 0){
-              characterSheetHTML += '<span><b>Traits: </b>';
+            characterSheetHTML += '<div class="pt-3" id="character"><h2>CHARACTER</h2><div class="pt-3 pb-3"><h4>' + characterObject.charactername + '</h4><span>' + raceToDisplay +  '<br>Level ' + characterObject.characterlevel + ' ' + characterObject.charactersubclass + ' ' + characterObject.characterclass.classname + '</span><br>';
+            if (characterObject.charactertraits.length > 0) {
+              characterSheetHTML += '<span><b>Traits: </b><br><ul>';
+              for (let t = 0; t < characterObject.charactertraits.length; t++) {
+                characterSheetHTML += '<li>' + characterObject.charactertraits[t] + '</li>';
+              }
+              characterSheetHTML += '</ul>'
             }
-            
             characterSheetHTML += '<div></div>';
             characterSheetHTML += '<div class="pt-5" id ="statblock"><h2>STATS</h2><div class="pt-3 pb-3"><h4>Ability Scores</h4>';
             characterSheetHTML += ' <div class="input-group input-group-lg mb-3"><span class="input-group-text" style="width: 150px;" id="ac">Armor Class</span><input type="text" class="form-control" value="' + characterObject.ac + '" aria-label="Armor Class" aria-describedby="basic-addon1" id="acScore"></div>'
@@ -391,6 +395,8 @@
         var hpScore = calculateHP(classChosen.name, characterLevel, abilityScores, classHitDie);
         //console.log('hpScore ' + hpScore);
 
+        let charTraits = defineTraits(raceChosen.traits, charSubRace.traits);
+
 
         //console.log(raceChosen.subraces);
         
@@ -400,6 +406,7 @@
         characterObj["charactersubclass"] = charSubClass;
         characterObj["characterlevel"] = characterLevel;
         characterObj["charactersubrace"] = charSubRace;
+        characterObj["charactertraits"] = charTraits;
         characterObj["armor"] = armorChosen;
         characterObj["weapons"] = weaponsChosen;
         characterObj["abilityscores"] = abilityScores;
@@ -410,6 +417,23 @@
 
         populateCharacterSheet(characterObj);
 
+      }
+
+      function defineTraits(subRaceTraits, raceTraits) {
+        const traitsList = [];
+        if (subRaceTraits.length > 0) {
+          for (let t = 0; t < subRaceTraits.length ; t++) {
+            let traitName = subRaceTraits[t];
+            traitsList.push(traitName);
+          }
+        }
+        if (raceTraits.length > 0) {
+          for (let t = 0; t < raceTraits.length ; t++) {
+            let traitName = raceTraits[t];
+            traitsList.push(traitName);
+          }
+        }
+        return traitsList;
       }
 
       function calculateSpells(searchObj) {
