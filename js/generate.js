@@ -160,29 +160,29 @@
             characterSheetHTML += '<h6>Death Saving Throws</h6>';
             characterSheetHTML += '<h7>Success</h7><br>';
             characterSheetHTML += '<div class="form-check form-check-inline mb-3">';
-            characterSheetHTML += '<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">';
-            characterSheetHTML += '<label class="form-check-label" for="inlineCheckbox1">1</label>';
+            characterSheetHTML += '<input class="form-check-input" type="checkbox" id="deathSaveSuccess1" value="">';
+            characterSheetHTML += '<label class="form-check-label" for="deathSaveSuccess1">1</label>';
             characterSheetHTML += '</div>';
             characterSheetHTML += '<div class="form-check form-check-inline">';
-            characterSheetHTML += '<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">'
-            characterSheetHTML += '<label class="form-check-label" for="inlineCheckbox2">2</label>';
+            characterSheetHTML += '<input class="form-check-input" type="checkbox" id="deathSaveSuccess2" value="">'
+            characterSheetHTML += '<label class="form-check-label" for="deathSaveSuccess2">2</label>';
             characterSheetHTML += '</div>';
             characterSheetHTML += '<div class="form-check form-check-inline">';
-            characterSheetHTML += '<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">';
-            characterSheetHTML += '<label class="form-check-label" for="inlineCheckbox3">3</label>';
+            characterSheetHTML += '<input class="form-check-input" type="checkbox" id="deathSaveFail1" value="">';
+            characterSheetHTML += '<label class="form-check-label" for="deathSaveFail1">3</label>';
             characterSheetHTML += '</div><br>';
             characterSheetHTML += '<h7>Fail</h7><br>';
             characterSheetHTML += '<div class="form-check form-check-inline mb-5">';
-            characterSheetHTML += '<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">';
-            characterSheetHTML += '<label class="form-check-label" for="inlineCheckbox1">1</label>';
+            characterSheetHTML += '<input class="form-check-input" type="checkbox" id="deathSaveFail1" value="">';
+            characterSheetHTML += '<label class="form-check-label" for="deathSaveFail1">1</label>';
             characterSheetHTML += '</div>';
             characterSheetHTML += '<div class="form-check form-check-inline">';
-            characterSheetHTML += '<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">'
-            characterSheetHTML += '<label class="form-check-label" for="inlineCheckbox2">2</label>';
+            characterSheetHTML += '<input class="form-check-input" type="checkbox" id="deathSaveFail2" value="">'
+            characterSheetHTML += '<label class="form-check-label" for="deathSaveFail2">2</label>';
             characterSheetHTML += '</div>';
             characterSheetHTML += '<div class="form-check form-check-inline">';
-            characterSheetHTML += '<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">';
-            characterSheetHTML += '<label class="form-check-label" for="inlineCheckbox3">3</label>';
+            characterSheetHTML += '<input class="form-check-input" type="checkbox" id="deathSaveFail3" value="">';
+            characterSheetHTML += '<label class="form-check-label" for="deathSaveFail3">3</label>';
             characterSheetHTML += '</div>';
 
             for(let as = 0; as < characterObject.abilityscores.length; as++) {
