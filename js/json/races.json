@@ -2,41 +2,34 @@ var racesData = [
     {
       "name": "Human",
       "subraces": [],
-      "traits": ["+1 to all ability scores", "Versatile"],
+      "traits": [],
       "abilitymodifiers" : [
       	{
       		"name": "Stength",
-      		"mod" : "+",
       		"value": 1
       	},
       	{
       		"name": "Dexterity",
-      		"mod" : "+",
       		"value": 1
       	},
       	{
       		"name": "Wisdom",
-      		"mod" : "+",
       		"value": 1
       	},
       	{
       		"name": "Constitution",
-      		"mod" : "+",
       		"value": 1
       	},
       	{
       		"name": "Intelligence",
-      		"mod" : "+",
       		"value": 1
       	},
       	{
       		"name": "Wisdom",
-      		"mod" : "+",
       		"value": 1
       	},
       	{
       		"name": "Charisma",
-      		"mod" : "+",
       		"value": 1
       	}
       ],
@@ -47,33 +40,30 @@ var racesData = [
       "subraces": [
         {
           "name": "High Elf",
-          "traits": ["+1 Intelligence", "Elf Weapon Training", "Cantrip"],
+          "traits": ["Elf Weapon Training", "Cantrip", "Extra Language"],
       "abilitymodifiers" : [
       	{
       		"name": "Intelligence",
-      		"mod" : "+",
       		"value": 1
       	}
       ],
         },
         {
           "name": "Wood Elf",
-          "traits": ["+1 Wisdom", "Elf Weapon Training", "Fleet of Foot", "Mask of the Wild"],
+          "traits": ["Elf Weapon Training", "Fleet of Foot", "Mask of the Wild"],
           "abilitymodifiers" : [
       	{
       		"name": "Wisdom",
-      		"mod" : "+",
       		"value": 1
       	}
       ],
         },
         {
           "name": "Dark Elf (Drow)",
-          "traits": ["+1 Charisma", "Drow Magic", "Superior Darkvision", "Sunlight Sensitivity"],
+          "traits": ["Drow Magic", "Superior Darkvision", "Sunlight Sensitivity"],
           "abilitymodifiers" : [
       	{
       		"name": "Charisma",
-      		"mod" : "+",
       		"value": 1
       	}
       ],
@@ -82,8 +72,7 @@ var racesData = [
       "traits": ["Darkvision", "Keen Senses", "Fey Ancestry", "Trance"],
           "abilitymodifiers" : [
       	{
-      		"name": "Charisma",
-      		"mod" : "+",
+      		"name": "Dexterity",
       		"value": 1
       	}
       ],
@@ -95,29 +84,35 @@ var racesData = [
       "subraces": [
         {
           "name": "Hill Dwarf",
-          "traits": ["+1 Wisdom", "Dwarven Toughness"],
+          "traits": ["Dwarven Toughness"],
           "abilitymodifiers" : [
       	{
       		"name": "Wisdom",
-      		"mod" : "+",
       		"value": 1
       	}
       ],
+          "hpmodifiers": [
+          	{
+          		"value": 1
+          	}]
         },
         {
           "name": "Mountain Dwarf",
-          "traits": ["+2 Strength", "Dwarven Armor Training", "Dwarven Combat Training"],
+          "traits": ["Dwarven Armor Training"],
           "abilitymodifiers" : [
       	{
       		"name": "Strength",
-      		"mod" : "+",
       		"value": 2
       	}
       ],
         }
       ],
-      "traits": ["Darkvision", "Dwarven Resilience", "Dwarven Combat Training", "Stonecunning"],
+      "traits": ["Darkvision", "Dwarven Resilience", "Dwarven Combat Training", "Stonecunning", "Tool Proficiency"],
           "abilitymodifiers" : [
+          	{
+          		"name" : "Constitution",
+          		"value" : 2
+          }
       ],
       "speed" : 20
     },
@@ -126,29 +121,31 @@ var racesData = [
       "subraces": [
         {
           "name": "Lightfoot Halfling",
-          "traits": ["+1 Charisma", "Naturally Stealthy"],
+          "traits": ["Naturally Stealthy"],
           "abilitymodifiers" : [
       	{
       		"name": "Charisma",
-      		"mod" : "+",
       		"value": 1
       	}
       ],
         },
         {
           "name": "Stout Halfling",
-          "traits": ["+1 Constitution", "Stout Resilience"],
+          "traits": ["Stout Resilience"],
           "abilitymodifiers" : [
       	{
       		"name": "Charisma",
-      		"mod" : "+",
       		"value": 1
       	}
       ],
         }
       ],
-      "traits": ["Lucky", "Brave", "Halfling Nimbleness"],
+      "traits": ["Lucky", "Brave", "Halfling Nimbleness", "Lucky"],
           "abilitymodifiers" : [
+          	{
+          		"name": "Dexterity",
+          		"value": 2
+          	}
       ],
       "speed" : 20
     },
@@ -157,58 +154,57 @@ var racesData = [
       "subraces": [
         {
           "name": "Rock Gnome",
-          "traits": ["+1 Constitution", "Artificer's Lore", "Tinker"],
+          "traits": ["Artificer's Lore", "Tinker"],
           "abilitymodifiers" : [
       	{
       		"name": "Constitution",
-      		"mod" : "+",
       		"value": 1
       	}
       ],
         },
         {
           "name": "Forest Gnome",
-          "traits": ["+1 Dexterity", "Natural Illusionist", "Speak with Small Beasts"],
+          "traits": ["Natural Illusionist", "Speak with Small Beasts"],
           "abilitymodifiers" : [
       	{
       		"name": "Dexterity",
-      		"mod" : "+",
       		"value": 1
       	}
       ],
         }
       ],
-      "traits": ["Darkvision", "Gnome Cunning", "Artificer's Lore"],
+      "traits": ["Darkvision", "Gnome Cunning"],
           "abilitymodifiers" : [
+          	{
+          		"name": "Intelligence",
+          		"value": 2
+          	}
       ],
       "speed" : 20
     },
     {
       "name": "Half-Elf",
       "subraces": [],
-      "traits": ["+2 Charisma", "Two Ability Scores of Choice", "Fey Ancestry", "Skill Versatility"],
+      "traits": ["Two Ability Scores of Choice", "Fey Ancestry", "Skill Versatility"],
           "abilitymodifiers" : [
       	{
       		"name": "Charisma",
-      		"mod" : "+",
       		"value": 2
-      	}
+      	}, 
       ],
       "speed" : 30
     },
     {
       "name": "Half-Orc",
       "subraces": [],
-      "traits": ["+2 Strength", "+1 Constitution", "Darkvision", "Relentless Endurance", "Savage Attacks"],
+      "traits": ["Darkvision", "Relentless Endurance", "Savage Attacks"],
           "abilitymodifiers" : [
       	{
       		"name": "Strength",
-      		"mod" : "+",
       		"value": 2
       	},
       	{
       		"name": "Constitution",
-      		"mod" : "+",
       		"value": 1
       	}
       ],
@@ -217,16 +213,14 @@ var racesData = [
     {
       "name": "Tiefling",
       "subraces": [],
-      "traits": ["+2 Charisma", "+1 Intelligence", "Darkvision", "Hellish Resistance", "Infernal Legacy"],
+      "traits": ["Darkvision", "Hellish Resistance", "Infernal Legacy"],
        "abilitymodifiers" : [
       	{
       		"name": "Charisma",
-      		"mod" : "+",
       		"value": 2
       	},
       	{
       		"name": "Intelligence",
-      		"mod" : "+",
       		"value": 1
       	}
       ],
@@ -234,14 +228,78 @@ var racesData = [
       "speed" : 30
     },
     {
-      "name": "Dargonborn",
-      "subraces": [],
-      "traits": ["+2 Strength", "Breath Weapon", "Damage Resistance", "Draconic Ancestry"],
+      "name": "Dragonborn",
+      "subraces": [
+      	{
+      		"name": "Black",
+      		"traits": [],
+      		"abilitymodifiers": [
+      		]
+      	},
+      	{
+      		"name": "Blue",
+      		"traits": [],
+      		"abilitymodifiers": [
+      		]
+      	},
+      	{
+      		"name": "Brass",
+      		"traits": [],
+      		"abilitymodifiers": [
+      		]
+      	},
+      	{
+      		"name": "Bronze",
+      		"traits": [],
+      		"abilitymodifiers": [
+      		]
+      	},
+      	{
+      		"name": "Copper",
+      		"traits": [],
+      		"abilitymodifiers": [
+      		]
+      	},
+      	{
+      		"name": "Gold",
+      		"traits": [],
+      		"abilitymodifiers": [
+      		]
+      	},
+      	{
+      		"name": "Green",
+      		"traits": [],
+      		"abilitymodifiers": [
+      		]
+      	},
+      	{
+      		"name": "Red",
+      		"traits": [],
+      		"abilitymodifiers": [
+      		]
+      	},
+      	{
+      		"name": "Silver",
+      		"traits": [],
+      		"abilitymodifiers": [
+      		]
+      	},
+      	{
+      		"name": "White",
+      		"traits": [],
+      		"abilitymodifiers": [
+      		]
+      	}
+      ],
+      "traits": ["Breath Weapon", "Damage Resistance", "Draconic Ancestry"],
        "abilitymodifiers" : [
       	{
       		"name": "Strength",
-      		"mod" : "+",
       		"value": 2
+      	},
+      	{
+      		"name": "Charisma",
+      		"value": 1
       	}
       ],
       "speed" : 30
