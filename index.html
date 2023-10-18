@@ -1,5 +1,5 @@
 
-<!doctype html>
+   <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -35,10 +35,10 @@
     }
 </style>
   </head>
- <body style="background: rgb(2,0,36); background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);">
-    <div class="container p-3 mt-3 mb-3" style="margin: 0px auto; background-color: #ffffff; max-width: 600px; width: 95%;">
+  <body style="background: rgb(63,251,146); background: radial-gradient(circle, rgba(63,251,146,1) 0%, rgba(105,70,252,1) 100%);">
+    <div class="container p-3 mt-3 mb-3" style="margin: 0px auto; background-color: #ffffff; max-width: 600px; width: 95%; border-radius: 10px;">
       <div style="width: 100%; max-width: 500px; margin: 0px auto;" id="maincontain">
-          <div class="pt-3" style="font-family: 'Josefin Slab', serif;"><h1 style="font-family: 'Josefin Slab', serif; font-size: 2em;"><b>Ye Olde<br>CharacterCreator</b></h1></div>
+          <div class="pt-3" style="font-family: 'Josefin Slab', serif;"><h1 style="font-family: 'Josefin Slab', serif; font-size: 3em;"><b>Ye Olde<br>Character Creator</b></h1></div>
         <div class="pt-3" id="character">
           <h2>CHARACTER</h2>
           <div class="pt-3 pb-3">
@@ -46,11 +46,11 @@
           </div>
           <div class="collapse show" id="charInfo">
             <div class="input-group input-group-lg mb-3">
-            <span class="input-group-text" style="width: 150px;" id="characterName">Name</span>
+            <span class="input-group-text" style="width: 115px;" id="characterName">Name</span>
             <input type="text" class="form-control" value="" aria-label="Character Name" id="charName" aria-describedby="basic-addon1">
           </div>
           <div class="input-group input-group-lg mb-3" id="level">
-              <label class="input-group-text" for="levelSelect" style="width: 150px;">Level</label>
+              <label class="input-group-text" for="levelSelect" style="width: 115px;">Level</label>
               <select class="form-select" id="levelSelect">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -65,14 +65,14 @@
               </select>
             </div>
           <div class="input-group input-group-lg mb-3" id="race">
-              <label class="input-group-text" for="racesSelect" style="width: 150px;">Race</label>
+              <label class="input-group-text" for="racesSelect" style="width: 115px;">Race</label>
               <select class="form-select" id="racesSelect" onchange="populateSubRaces()">
                 <option selected>Choose</option>
                 <option value="Random">Random</option>
               </select>
             </div>
              <div class="input-group input-group-lg mb-3" id="class">
-              <label class="input-group-text" for="classesSelect" style="width: 150px;">Class</label>
+              <label class="input-group-text" for="classesSelect" style="width: 115px;">Class</label>
               <select class="form-select" id="classesSelect" onchange="populateSubClasses()">
                 <option selected>Choose</option>
                 <option value="Random">Random</option>
