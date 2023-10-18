@@ -1,5 +1,5 @@
 
-      var races = racesData;
+     var races = racesData;
       var classes = classesData;
       var armor = armorData;
       var weapons = weaponData;
@@ -56,7 +56,7 @@
           if(subRaceDiv) {
             subRaceDiv.remove();
           }
-          raceElement.insertAdjacentHTML('afterend', '<div class="input-group input-group-lg mb-3" id="subrace"><label class="input-group-text" for="subracesSelect" style="width: 150px;">SubRace</label><select class="form-select" id="subracesSelect"><option selected>Choose</option><option value="Random">Random</option></select></div>');
+          raceElement.insertAdjacentHTML('afterend', '<div class="input-group input-group-lg mb-3" id="subrace"><label class="input-group-text" for="subracesSelect" style="width: 115px;">SubRace</label><select class="form-select" id="subracesSelect"><option selected>Choose</option><option value="Random">Random</option></select></div>');
           var subraceElement = document.getElementById('subracesSelect');
           for (sr = 0; sr < subRaces.length; sr++) {
             var newOption = document.createElement("option");
@@ -85,7 +85,7 @@
           if(subclassDiv) {
             subclassDiv.remove();
           }
-          classElement.insertAdjacentHTML('afterend', '<div class="input-group input-group-lg mb-3" id="subclass"><label class="input-group-text" for="subclassesSelect" style="width: 150px;">SubClass</label><select class="form-select" id="subclassesSelect"><option selected>Choose</option><option value="Random">Random</option></select></div>');
+          classElement.insertAdjacentHTML('afterend', '<div class="input-group input-group-lg mb-3" id="subclass"><label class="input-group-text" for="subclassesSelect" style="width: 115px;">SubClass</label><select class="form-select" id="subclassesSelect"><option selected>Choose</option><option value="Random">Random</option></select></div>');
           var subclassElement = document.getElementById('subclassesSelect');
           for (sc = 0; sc < subClasses.length; sc++) {
             var newOption = document.createElement("option");
@@ -394,8 +394,19 @@
         var classHitDie = classChosen.hitdie;
         var hpScore = calculateHP(classChosen.name, characterLevel, abilityScores, classHitDie);
         //console.log('hpScore ' + hpScore);
+        if (raceChosen.traits) {
+          raceTraits = raceChosen.traits;
+        } else {
+          raceTraits = [];
+        }
 
-        let charTraits = defineTraits(raceChosen.traits, charSubRace.traits);
+        if (charSubRace.traits) {
+          subRaceTraits = charSubRace.traits;
+        } else {
+          subRaceTraits = [];
+        }
+
+        let charTraits = defineTraits(raceTraits, subRaceTraits);
 
 
         //console.log(raceChosen.subraces);
