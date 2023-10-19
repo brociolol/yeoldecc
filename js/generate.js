@@ -275,6 +275,7 @@
             characterSheetHTML += '</div>';
 
             mainContain.innerHTML = characterSheetHTML;
+           window.scrollTo(0, 0);
 
 
       }
