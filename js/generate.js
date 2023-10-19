@@ -21,6 +21,10 @@
       var weaponSelect2 = document.getElementById('weaponSelect2');
       var levelSelect = document.getElementById('levelSelect');
 
+      //enable popovers
+      const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+      const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
      function populateRaces() {
         
         for(r = 0; r < races.length; r++) {
@@ -133,10 +137,18 @@
 
         console.log(characterObject);
         var mainContain = document.getElementById('maincontain');
+        let raceName = characterObject.characterrace.name;
         let subRaceName = (characterObject.charactersubrace ? characterObject.charactersubrace.name : null);
-          let raceToDisplay = (subRaceName ? subRaceName : characterObject.characterrace.name)
+          if(raceName == 'Dragonborn') {
+            var raceToDisplay = raceName + ' (' + subRaceName + ')';
+            console.log(raceToDisplay);
+          } else {
+            var raceToDisplay = (subRaceName ? subRaceName : raceName);
+            console.log(raceToDisplay);
+          }
+        let subClassName = (characterObject.charactersubclass ? characterObject.charactersubclass.name : "");
         var characterSheetHTML = '';
-            characterSheetHTML += '<div class="pt-3" id="character"><h2>CHARACTER</h2><div class="pt-3 pb-3"><h4>' + characterObject.charactername + '</h4><span>' + raceToDisplay +  '<br>Level ' + characterObject.characterlevel + ' ' + characterObject.charactersubclass + ' ' + characterObject.characterclass.classname + '</span><br>';
+            characterSheetHTML += '<div class="pt-3" id="character"><h2>CHARACTER</h2><div class="pt-3 pb-3"><h4>' + characterObject.charactername + '</h4><span>' + raceToDisplay +  '<br>Level ' + characterObject.characterlevel + ' ' + subClassName + ' ' + characterObject.characterclass.classname + '</span><br>';
             if (characterObject.charactertraits.length > 0) {
               characterSheetHTML += '<span><b>Traits: </b><br><ul>';
               for (let t = 0; t < characterObject.charactertraits.length; t++) {
@@ -364,11 +376,16 @@
           var charSubClass = "random";
         }
 
+        let subClassesForClass = classChosen.subclasses;
+
+        charSubClass = findSubClass(charSubClass, subClassesForClass);
+
         let subRacesForRace = raceChosen.subraces;
 
-        var charSubRace = findSubRace(charSubRace, subRacesForRace);
+        charSubRace = findSubRace(charSubRace, subRacesForRace);
+
         if(charSubRace){
-        var abilityModifiersRace = charSubRace.abilitymodifiers;
+          var abilityModifiersRace = charSubRace.abilitymodifiers;
       } else {
         var abilityModifiersRace = [];
       }
@@ -400,7 +417,7 @@
           raceTraits = [];
         }
 
-        if (charSubRace.traits) {
+        if (charSubRace) {
           subRaceTraits = charSubRace.traits;
         } else {
           subRaceTraits = [];
@@ -514,6 +531,18 @@
         }
          return classData;
          
+      }
+
+      function findSubClass(subClassName, subClasses) {
+        if(subClassName && subClasses) {
+          if(subClassName == 'random') {
+            var randomSubClassNumber = Math.floor(Math.random() * subClasses.length);
+            var subClassInfo = subClasses[randomSubClassNumber];
+          } else {
+            var subClassInfo = subClasses.find(subClasses => subClasses.name === subClassName);
+          }
+        }
+        return subClassInfo;
       }
 
 
