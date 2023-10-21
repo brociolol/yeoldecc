@@ -1,10 +1,11 @@
 
-     var races = racesData;
+      var races = racesData;
       var classes = classesData;
       var armor = armorData;
       var weapons = weaponData;
       var spells = jsonSpellData;
       var names = namesData;
+      var traits = traitsArray;
 
       // select fields to monitor
       var charNameElement = document.getElementById('charName');
@@ -20,6 +21,7 @@
       var weaponSelect1 = document.getElementById('weaponSelect1');
       var weaponSelect2 = document.getElementById('weaponSelect2');
       var levelSelect = document.getElementById('levelSelect');
+      var tomeDIV = document.getElementById('details');
 
       //enable popovers
       const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
@@ -150,10 +152,14 @@
         var characterSheetHTML = '';
             characterSheetHTML += '<div class="pt-3" id="character"><h2>CHARACTER</h2><div class="pt-3 pb-3"><h4>' + characterObject.charactername + '</h4><span>' + raceToDisplay +  '<br>Level ' + characterObject.characterlevel + ' ' + subClassName + ' ' + characterObject.characterclass.classname + '</span><br>';
             if (characterObject.charactertraits.length > 0) {
-              characterSheetHTML += '<span><b>Traits: </b><br><ul>';
+              characterSheetHTML += '<ul><b>Traits: </b><br><ul>';
+              let tomeHTML = '<span><b>Traits</b></span><br>';
               for (let t = 0; t < characterObject.charactertraits.length; t++) {
-                characterSheetHTML += '<li>' + characterObject.charactertraits[t] + '</li>';
+                characterSheetHTML += '<li>' + characterObject.charactertraits[t].name + '</li>';
+                tomeHTML += '<span><u>' + characterObject.charactertraits[t].name + '</u><br>'
+                tomeHTML += characterObject.charactertraits[t].description + '</span><br><br>';
               }
+              tomeDIV.innerHTML = tomeHTML;
               characterSheetHTML += '</ul>'
             }
             characterSheetHTML += '<div></div>';
@@ -214,11 +220,11 @@
               characterSheetHTML += '</div>';
             }
 
-            characterSheetHTML += '<div class="pt-5" id="weapons"><h2>INVENTORY</h2><br><h4>Weapons</h4><div class="accordion" id="weaponAccordion">';
+            characterSheetHTML += '<div class="pt-5" id="inventory"><h2>INVENTORY</h2><br><h4>Weapons</h4><div class="accordion" id="weaponAccordion">';
             for(let w = 0; w < characterObject.weapons.length; w++) {
               let weapon = characterObject.weapons[w];
               
-              characterSheetHTML += '<div class="accordion-item" style="background-image: url(\'https://www.toptal.com/designers/subtlepatterns/uploads/creampaper.png\')><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#weapon' + [w] + '" aria-expanded="false" aria-controls="weapon' + [w] + '" id="weaponName' + [w] + '">' + weapon.name + '</button></h2>';
+              characterSheetHTML += '<div class="accordion-item" style="background-image: url(\'https://www.toptal.com/designers/subtlepatterns/uploads/creampaper.png\')"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#weapon' + [w] + '" aria-expanded="false" aria-controls="weapon' + [w] + '" id="weaponName' + [w] + '">' + weapon.name + '</button></h2>';
               characterSheetHTML += '<div id="weapon' + [w] + '" class="accordion-collapse collapse" data-bs-parent="#weaponAccordion"><div class="accordion-body">';
 
               if(weapon.properties.length > 0) {
@@ -240,6 +246,27 @@
 
             }
             characterSheetHTML += '</div>';
+
+            characterSheetHTML += '<div class="pt-5" id="armor"><h6>Armor</h6>';
+            characterSheetHTML += '<div class="accordion" id="armorAccordion"><div class="accordion-item" style=""><h2 class="accordingHeader">';
+            characterSheetHTML += '<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#armor1" aria-expanded="true" aria-controls="armor1">';
+            characterSheetHTML += characterObject.armor.name + '</button></h2>';
+            characterSheetHTML += '<div id="armor1" class="accordion-collapse collapse" data-bs-parent="#armorAccordion">';
+            characterSheetHTML += '<div class="accordion-body">';
+            characterSheetHTML += characterObject.armor.description;
+            characterSheetHTML += '</div>';
+            characterSheetHTML += '</div>';
+            characterSheetHTML += '</div>';
+            characterSheetHTML += '</div>';
+
+            //characterSheetHTML += '<div class="pt-5" id="armor"><div class="accordion" id="armorAccordion">';
+            //characterSheetHTML += '<div class="accordion-item" style="background-image: url(\'https://www.toptal.com/designers/subtlepatterns/uploads/creampaper.png\')"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#armor" aria-expanded="false" aria-controls="armor" id="armorName">' + characterObject.armor.name + '</button></h2>';
+            //characterSheetHTML += '<div id="armor" class="accordion-collapse collapse" data-bs-parent="#weaponAccordion"><div class="accordion-body">';
+            //characterSheetHTML += '<em>' + characterObject.armor.category + ' ' + characterObject.armor.weight + '</em><br><br>';
+            //characterSheetHTML += '<span>' + characterObject.armor.description + '</span>';
+            //characterSheetHTML += '</div></div>';
+            //characterSheetHTML += '</div>';
+            //characterSheetHTML += '</div>';
 
             characterSheetHTML += '<div class="input-group input-group-lg mb-3 pt-5"><span class="input-group-text" id="gold" style="width: 150px;">Gold</span> <input type="number" class="form-control" value="50" aria-label="Gold" aria-describedby="basic-addon1" id="goldinput"></div>';
             characterSheetHTML += '<div class="btn-group mb-5" role="group" aria-label="Modify hit points">';
@@ -275,7 +302,7 @@
             characterSheetHTML += '</div>';
 
             mainContain.innerHTML = characterSheetHTML;
-           window.scrollTo(0, 0);
+            window.scrollTo(0, 0);
 
 
       }
@@ -425,6 +452,7 @@
         }
 
         let charTraits = defineTraits(raceTraits, subRaceTraits);
+        charTraits = getTraitsDetails(charTraits);
 
 
         //console.log(raceChosen.subraces);
@@ -463,6 +491,17 @@
           }
         }
         return traitsList;
+      }
+
+      function getTraitsDetails(traitsArray) {
+        let traitsToReturn = [];
+        if(traitsArray) {
+          for (let t = 0; t < traitsArray.length; t++) {
+            let traitInfo = traits.find(traits => traits.name == traitsArray[t]);
+            traitsToReturn.push(traitInfo);
+          }
+        }
+        return traitsToReturn;
       }
 
       function calculateSpells(searchObj) {
