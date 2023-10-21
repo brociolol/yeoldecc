@@ -152,7 +152,7 @@
         var characterSheetHTML = '';
             characterSheetHTML += '<div class="pt-3" id="character"><h2>CHARACTER</h2><div class="pt-3 pb-3"><h4>' + characterObject.charactername + '</h4><span>' + raceToDisplay +  '<br>Level ' + characterObject.characterlevel + ' ' + subClassName + ' ' + characterObject.characterclass.classname + '</span><br>';
             if (characterObject.charactertraits.length > 0) {
-              characterSheetHTML += '<ul><b>Traits: </b><br><ul>';
+              characterSheetHTML += '<ul><b>Traits: </b><br>';
               let tomeHTML = '<span><b>Traits</b></span><br>';
               for (let t = 0; t < characterObject.charactertraits.length; t++) {
                 characterSheetHTML += '<li>' + characterObject.charactertraits[t].name + '</li>';
