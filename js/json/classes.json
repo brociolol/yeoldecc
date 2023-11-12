@@ -2,59 +2,63 @@ var classesData =  [
     {
       "classname": "Barbarian",
       "subclasses": [
-        { "name": "Path of the Berserker" },
-        { "name": "Path of the Totem Warrior" },
-        { "name": "Path of the Ancestral Guardian" },
-        { "name": "Path of the Storm Herald" },
-        { "name": "Path of the Zealot" }
+        { "name": "Path of the Berserker", "spellcastability" : "" },
+        { "name": "Path of the Totem Warrior", "spellcastability" : "" },
+        { "name": "Path of the Ancestral Guardian", "spellcastability" : "" },
+        { "name": "Path of the Storm Herald", "spellcastability" : "" },
+        { "name": "Path of the Zealot", "spellcastability" : "" }
       ],
       "abilitypreference" : ["Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma"],
-      "hitdie" : "1d12"
+      "hitdie" : "1d12",
+      "spellcastability" : ""
     },
     {
       "classname": "Bard",
       "subclasses": [
-        { "name": "College of Lore" },
-        { "name": "College of Valor" },
-        { "name": "College of Glamour" },
-        { "name": "College of Swords" },
-        { "name": "College of Whispers" }
+        { "name": "College of Lore", "spellcastability" : "" },
+        { "name": "College of Valor", "spellcastability" : "" },
+        { "name": "College of Glamour", "spellcastability" : "" },
+        { "name": "College of Swords", "spellcastability" : "" },
+        { "name": "College of Whispers", "spellcastability" : "" }
       ],
       "abilitypreference" : ["Charisma", "Dexterity", "Constitution", "Wisdom", "Intelligence", "Strength"],
-      "hitdie" : "1d8"
+      "hitdie" : "1d8",
+      "spellcastability" : "Charisma"
     },
     {
       "classname": "Cleric",
       "subclasses": [
-        { "name": "Life Domain" },
-        { "name": "Light Domain" },
-        { "name": "Nature Domain" },
-        { "name": "Tempest Domain" },
-        { "name": "Trickery Domain" }
+        { "name": "Life Domain", "spellcastability" : "" },
+        { "name": "Light Domain", "spellcastability" : "" },
+        { "name": "Nature Domain", "spellcastability" : "" },
+        { "name": "Tempest Domain", "spellcastability" : "" },
+        { "name": "Trickery Domain", "spellcastability" : "" }
       ],
       "abilitypreference" : ["Wisdom", "Constitution", "Dexterity", "Stength", "Intelligence", "Charisma"],
-      "hitdie" : "1d8"
+      "hitdie" : "1d8",
+      "spellcastability" : "Wisdom"
     },
     {
       "classname": "Druid",
       "subclasses": [
-        { "name": "Circle of the Land" },
-        { "name": "Circle of the Moon" },
-        { "name": "Circle of Dreams" },
-        { "name": "Circle of the Shepherd" },
-        { "name": "Circle of Spores" }
+        { "name": "Circle of the Land", "spellcastability" : "" },
+        { "name": "Circle of the Moon", "spellcastability" : "" },
+        { "name": "Circle of Dreams", "spellcastability" : "" },
+        { "name": "Circle of the Shepherd", "spellcastability" : "" },
+        { "name": "Circle of Spores", "spellcastability" : "" }
       ],
       "abilitypreference" : ["Wisdom", "Dexterity", "Constitution", "Intelligence", "Charisma", "Strength"],
-      "hitdie" : "1d8"
+      "hitdie" : "1d8",
+      "spellcastability" : "Wisdom"
     },
     {
       "classname": "Fighter",
       "subclasses": [
-        { "name": "Champion" },
-        { "name": "Battle Master" },
-        { "name": "Eldritch Knight" },
-        { "name": "Arcane Archer" },
-        { "name": "Cavalier" }
+        { "name": "Champion" , "spellcastability" : ""},
+        { "name": "Battle Master", "spellcastability" : "" },
+        { "name": "Eldritch Knight", "spellcastability" : "Intelligence" },
+        { "name": "Arcane Archer", "spellcastability" : "" },
+        { "name": "Cavalier", "spellcastability" : "" }
       ],
       "abilitypreference" : ["Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma"],
       "hitdie" : "1d10"
@@ -62,47 +66,50 @@ var classesData =  [
     {
       "classname": "Monk",
       "subclasses": [
-        { "name": "Way of the Open Hand" },
-        { "name": "Way of Shadow" },
-        { "name": "Way of the Four Elements" },
-        { "name": "Way of the Kensei" },
-        { "name": "Way of the Sun Soul" }
+        { "name": "Way of the Open Hand", "spellcastability" : "" },
+        { "name": "Way of Shadow", "spellcastability" : "" },
+        { "name": "Way of the Four Elements", "spellcastability" : "" },
+        { "name": "Way of the Kensei", "spellcastability" : "" },
+        { "name": "Way of the Sun Soul", "spellcastability" : "" }
       ],
       "abilitypreference" : ["Dexterity", "Wisdom", "Constitution", "Strength", "Intelligence", "Charisma"],
-      "hitdie" : "1d8"
+      "hitdie" : "1d8",
+      "spellcastability" : ""
     },
     {
       "classname": "Paladin",
       "subclasses": [
-        { "name": "Oath of Devotion" },
-        { "name": "Oath of the Ancients" },
-        { "name": "Oath of Vengeance" },
-        { "name": "Oath of the Crown" },
-        { "name": "Oath of Conquest" }
+        { "name": "Oath of Devotion", "spellcastability" : "" },
+        { "name": "Oath of the Ancients", "spellcastability" : "" },
+        { "name": "Oath of Vengeance", "spellcastability" : "" },
+        { "name": "Oath of the Crown", "spellcastability" : "" },
+        { "name": "Oath of Conquest", "spellcastability" : "" }
       ],
       "abilitypreference" : ["Strength", "Charisma", "Constitution", "Dexterity", "Wisdom", "Intelligence"],
-      "hitdie" : "1d10"
+      "hitdie" : "1d10",
+      "spellcastability" : "Charisma"
     },
     {
       "classname": "Ranger",
       "subclasses": [
-        { "name": "Hunter" },
-        { "name": "Beast Master" },
-        { "name": "Gloom Stalker" },
-        { "name": "Horizon Walker" },
-        { "name": "Monster Slayer" }
+        { "name": "Hunter", "spellcastability" : ""},
+        { "name": "Beast Master", "spellcastability" : "" },
+        { "name": "Gloom Stalker", "spellcastability" : "" },
+        { "name": "Horizon Walker", "spellcastability" : "" },
+        { "name": "Monster Slayer", "spellcastability" : "" }
       ],
       "abilitypreference" : ["Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma"],
-      "hitdie" : "1d10"
+      "hitdie" : "1d10",
+      "spellcastability" : "Wisdom"
     },
     {
       "classname": "Rogue",
       "subclasses": [
-        { "name": "Thief" },
-        { "name": "Assassin" },
-        { "name": "Arcane Trickster" },
-        { "name": "Inquisitive" },
-        { "name": "Mastermind" }
+        { "name": "Thief", "spellcastability" : "" },
+        { "name": "Assassin", "spellcastability" : "" },
+        { "name": "Arcane Trickster", "spellcastability" : "Intelligence" },
+        { "name": "Inquisitive", "spellcastability" : "" },
+        { "name": "Mastermind", "spellcastability" : "" }
       ],
       "abilitypreference" : ["Dexterity", "Charisma", "Intelligence", "Constitution", "Wisdom", "Strength"],
       "hitdie" : "1d8"
@@ -110,37 +117,40 @@ var classesData =  [
     {
       "classname": "Sorcerer",
       "subclasses": [
-        { "name": "Draconic Bloodline" },
-        { "name": "Wild Magic" },
-        { "name": "Storm Sorcery" },
-        { "name": "Divine Soul" },
-        { "name": "Shadow Magic" }
+        { "name": "Draconic Bloodline", "spellcastability" : "" },
+        { "name": "Wild Magic", "spellcastability" : "" },
+        { "name": "Storm Sorcery", "spellcastability" : "" },
+        { "name": "Divine Soul", "spellcastability" : "" },
+        { "name": "Shadow Magic", "spellcastability" : "" }
       ],
       "abilitypreference" : ["Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma"],
-      "hitdie" : "1d6"
+      "hitdie" : "1d6",
+      "spellcastability" : "Charisma"
     },
     {
       "classname": "Warlock",
       "subclasses": [
-        { "name": "The Archfey" },
-        { "name": "The Fiend" },
-        { "name": "The Great Old One" },
-        { "name": "The Celestial" },
-        { "name": "The Hexblade" }
+        { "name": "The Archfey", "spellcastability" : "" },
+        { "name": "The Fiend", "spellcastability" : "" },
+        { "name": "The Great Old One", "spellcastability" : "" },
+        { "name": "The Celestial", "spellcastability" : "" },
+        { "name": "The Hexblade", "spellcastability" : "" }
       ],
       "abilitypreference" : ["Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma"],
-      "hitdie" : "1d8"
+      "hitdie" : "1d8",
+      "spellcastability" : "Charisma"
     },
     {
       "classname": "Wizard",
       "subclasses": [
-        { "name": "School of Abjuration" },
-        { "name": "School of Conjuration" },
-        { "name": "School of Divination" },
-        { "name": "School of Enchantment" },
-        { "name": "School of Evocation" }
+        { "name": "School of Abjuration", "spellcastability" : "" },
+        { "name": "School of Conjuration", "spellcastability" : "" },
+        { "name": "School of Divination", "spellcastability" : "" },
+        { "name": "School of Enchantment", "spellcastability" : "" },
+        { "name": "School of Evocation", "spellcastability" : "" }
       ],
       "abilitypreference" : ["Strength", "Constitution", "Dexterity", "Wisdom", "Intelligence", "Charisma"],
-      "hitdie" : "1d6"
+      "hitdie" : "1d6",
+      "spellcastability" : "Intelligence"
     }
   ]
