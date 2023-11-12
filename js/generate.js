@@ -268,13 +268,12 @@
             //characterSheetHTML += '</div>';
             //characterSheetHTML += '</div>';
 
-            characterSheetHTML += '<div class="input-group input-group-lg mb-3 pt-5"><span class="input-group-text" id="gold" style="width: 150px;">Gold</span> <input type="number" class="form-control" value="50" aria-label="Gold" aria-describedby="basic-addon1" id="goldinput"></div>';
+            characterSheetHTML += '<div class="input-group input-group-lg mb-3 pt-5"><span class="input-group-text" id="gold" style="width: 150px;">Gold</span> <input type="number" class="form-control" value="50" aria-label="Gold" aria-describedby="basic-addon1" id="availableGold"></div>';
             characterSheetHTML += '<div class="btn-group mb-5" role="group" aria-label="Modify hit points">';
-            characterSheetHTML += '<button type="button" class="btn btn-outline-secondary" onclick="modifyHP(\'-\')">&nbsp;-&nbsp;</button>';
-            characterSheetHTML += '<button type="button" class="btn btn-outline-secondary" onclick="modifyHP(\'+\')">&nbsp;+&nbsp;</button>';
-            characterSheetHTML += '<button type="button" class="btn btn-outline-secondary" onclick="modifyHP(\'-5\')">&nbsp;-5&nbsp;</button>';
-            characterSheetHTML += '<button type="button" class="btn btn-outline-secondary" onclick="modifyHP(\'+5\')">&nbsp;+5&nbsp;</button>';
-            characterSheetHTML += '<button type="button" class="btn btn-outline-secondary" onclick="modifyHP(\'R\')">Reset</button>';
+            characterSheetHTML += '<button type="button" class="btn btn-outline-secondary" onclick="modifyGold(\'-\')">&nbsp;-&nbsp;</button>';
+            characterSheetHTML += '<button type="button" class="btn btn-outline-secondary" onclick="modifyGold(\'+\')">&nbsp;+&nbsp;</button>';
+            characterSheetHTML += '<button type="button" class="btn btn-outline-secondary" onclick="modifyGold(\'-5\')">&nbsp;-5&nbsp;</button>';
+            characterSheetHTML += '<button type="button" class="btn btn-outline-secondary" onclick="modifyGold(\'+5\')">&nbsp;+5&nbsp;</button>';
             characterSheetHTML += '</div>';
 
             var spells = characterObject.spells
@@ -454,6 +453,16 @@
         let charTraits = defineTraits(raceTraits, subRaceTraits);
         charTraits = getTraitsDetails(charTraits);
 
+        if (charSubClass.spellcastability.length > 0) {
+          var spellAbility = charSubClass.spellcastability;
+        } else if (classChosen.spellcastability.length > 0) {
+          var spellAbility = charSubClass.spellcastability;
+        } else {
+
+        }
+
+        var spellDC = calculateSpellSaveDC(spellAbility, abilityScores);
+
 
         //console.log(raceChosen.subraces);
         
@@ -474,6 +483,14 @@
 
         populateCharacterSheet(characterObj);
 
+      }
+
+      function calculateSpellSaveDC(spellAbility, abilityScores) {
+        if (spellAbility.length > 0) {
+          let modifier = abilityScores.find(abilityScores => abilityScores.modifier)
+          let spellSave = (8 + parseInt(modifier));
+          console.log(spellSave);
+        }
       }
 
       function defineTraits(subRaceTraits, raceTraits) {
@@ -739,6 +756,21 @@
           availHP.value = parseInt(availHP.value) + 5;
         }  else if (modifier == 'R') {
           availHP.value = parseInt(standardHP.value);
+        } else {
+
+        }
+      }
+
+      function modifyGold(modifier) {
+        var availGold = document.getElementById('availableGold');
+        if (modifier == '+') {
+          availGold.value = parseInt(availGold.value) + 1;
+        } else if (modifier == '-') {
+          availGold.value = parseInt(availGold.value) - 1;
+        } else if (modifier == '-5') {
+          availGold.value = parseInt(availGold.value) - 5;
+        }  else if (modifier == '+5') {
+          availGold.value = parseInt(availGold.value) + 5;
         } else {
 
         }
