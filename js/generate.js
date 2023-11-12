@@ -479,6 +479,7 @@
         characterObj["ac"] = acScore;
         characterObj["hp"] = hpScore;
         characterObj["initiative"] = initScore;
+        characterObj["spellSaveDC"] = spellDC;
         characterObj["spells"] = spellsList;
 
         populateCharacterSheet(characterObj);
